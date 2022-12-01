@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.CRUDMapper">
+    <insert id="insertUser">
+        insert into mybatisframe.tb_users
+        values (#{username},#{password},
+                #{usertype},#{gender},
+                #{birthdate},#{hobby},
+                #{email},#{introduction})
+    </insert>
+    <select id="QueryAllUser" resultType="employee">
+        select * from springframe.employee_info_restful;
+    </select>
+</mapper>   
+    
